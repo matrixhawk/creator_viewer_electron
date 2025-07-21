@@ -1,0 +1,54 @@
+{
+  "dependencies": {
+    "@types/ws": "^8.18.1",
+    "concurrently": "^9.2.0",
+    "cross-env": "^7.0.3",
+    "custom-electron-titlebar": "^4.2.8",
+    "element-plus": "^2.10.4",
+    "typescript": "^5.8.3",
+    "unplugin-auto-import": "^19.3.0",
+    "unplugin-element-plus": "^0.10.0",
+    "unplugin-vue-components": "^28.8.0",
+    "vue-tsc": "^3.0.3",
+    "ws": "^8.18.3"
+  },
+  "name": "creator-viewer-desktop",
+  "version": "1.0.0",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "vite build && tsc -p ./tsconfig.main.json",
+    "build:electron": "tsc -p ./tsconfig.main.json && cp -r dist/renderer dist-electron/",
+    "dev": "concurrently \"vite\" \"npm run watch:main\" \"npm run dev:electron\"",
+    "watch:main": "tsc -p tsconfig.main.json --watch",
+    "dev:electron": "cross-env NODE_ENV=DEV electron .",
+    "electron": "\"npm run build\" && electron .",
+    "main": "dist/main/index.js",
+    "build_pack": "vite build && tsc -p ./tsconfig.main.json",
+    "dist": "npm run build_pack && electron-builder"
+  },
+  "author": "bunnya",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.0",
+    "electron": "^37.2.3",
+    "electron-builder": "^26.0.12",
+    "vite": "^7.0.5",
+    "vue": "^3.5.17"
+  },
+  "build": {
+    "appId": "com.example.yourapp",
+    "productName": "CreatorViewer",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": []
+    }
+  }
+}
