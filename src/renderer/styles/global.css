@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Cascadia';
+  src: url('/fonts/cascadia-code.ttf') format('truetype');
+}
+
+:root {
+  --el-font-family: 'Cascadia', sans-serif;
+}
+
+div {
+  font-family: 'Cascadia' !important;
+}
