@@ -1,0 +1,3 @@
+[submodule "src/renderer/viewer"]
+	path = src/renderer/viewer
+	url = https://github.com/bunnya33/creator_viewer_renderer.git
