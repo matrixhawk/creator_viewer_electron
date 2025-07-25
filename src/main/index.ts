@@ -33,7 +33,7 @@ function createWindow() {
         // 生产模式加载打包后的html
         win.loadFile(path.join(__dirname, '../renderer/index.html'))
     }
-    //  win.webContents.openDevTools()
+    win.webContents.openDevTools()
     win.setAlwaysOnTop(true)
     attachTitlebarToWindow(win);
 
