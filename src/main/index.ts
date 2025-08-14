@@ -14,7 +14,7 @@ function createWindow() {
         frame: false, // needed if process.versions.electron < 14
         titleBarStyle: 'hidden',
         /* You can use *titleBarOverlay: true* to use the original Windows controls */
-        titleBarOverlay: true,
+        titleBarOverlay: false,
         webPreferences: {
             sandbox: false,
             preload: path.join(__dirname, 'preload.js'),
@@ -46,6 +46,10 @@ function createWindow() {
 
     ipcMain.on('send-data', (_event, data) => {
         channel.send(data);
+    })
+
+    ipcMain.on('toggle-always-on-top', (_event, isOnTop)=>{
+        win.setAlwaysOnTop(isOnTop)
     })
 }
 
