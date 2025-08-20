@@ -41,7 +41,7 @@ declare global {
         /** 属性组所属的节点或组件名称 */
         name: string;
         /** 属性组所属的Object类型 */
-        type: "component" | "node";
+        type: NodeType;
         /** 所属对象的uuid（用于反向查找节点或组件） */
         uuid: string;
         /** CCObject 所拥有的属性 */
@@ -91,6 +91,24 @@ declare global {
             enumItems: EnumItem[];
             enumValue: string | number;
         }
+    }
+
+    interface INodeTypeData {
+        isValid : boolean;
+        nodeName : string;
+        nodeUuid : string;
+    }
+
+    interface IComponentTypeData {
+        isValid : boolean;
+        nodeUuid : string;
+        componentName : string;
+        nodeName : string;
+    }
+
+    interface IAssetTypeData {
+        className: string;
+        assetName: string;
     }
 
     /** Creator Viewer 支持的属性类型 */
