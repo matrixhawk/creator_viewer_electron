@@ -15,7 +15,7 @@
       ]
     }
   },
-  "include": [
+  "include": ["src/main",
     "src/renderer",
     "global.d.ts",
     "electron_channel.d.ts"

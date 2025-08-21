@@ -11,6 +11,7 @@
     "unplugin-element-plus": "^0.10.0",
     "unplugin-vue-components": "^28.8.0",
     "vue-tsc": "^3.0.3",
+    "vue3-ts-jsoneditor": "^3.0.3",
     "ws": "^8.18.3"
   },
   "name": "creator-viewer-desktop",
