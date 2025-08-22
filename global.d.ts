@@ -145,7 +145,8 @@ declare global {
         | { type: 'select_node'; data: string }
         | { type: 'on_tracker_prop_change', data: { targetUuid: string, propName: string, value: any } }
         | { type: 'print_target_by_uuid', data: { targetUuid: string } }
-        | { type: 'pull_client_storage', data: {} };
+        | { type: 'pull_client_storage', data: {} }
+        | { type: 'exec_code', data: string };
 
     
         /** 抽象出的ViewerChannel接口，Channel可以是WebSocket，也可以是Electron的ipc，或者是Web端同意上下文的直接传递，也可以是浏览器插件的Port  */

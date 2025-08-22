@@ -5,6 +5,7 @@
     "cross-env": "^7.0.3",
     "custom-electron-titlebar": "^4.2.8",
     "element-plus": "^2.10.4",
+    "highlight.js": "^11.11.1",
     "mitt": "^3.0.1",
     "typescript": "^5.8.3",
     "unplugin-auto-import": "^19.3.0",
@@ -32,6 +33,7 @@
   "description": "",
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
+    "@vitejs/plugin-vue-jsx": "^5.0.1",
     "electron": "^37.2.6",
     "electron-builder": "^23.6.0",
     "vite": "^7.0.5",
